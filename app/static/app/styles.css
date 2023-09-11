@@ -1,0 +1,19 @@
+.Audiowide
+{
+    font-family: 'Audiowide', cursive;
+}
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scrollbar-width: 1px;
+}
+::-webkit-scrollbar {
+    height:0px;
+    width: 0px;
+  }
+
+
+  
