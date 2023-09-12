@@ -247,7 +247,45 @@
                       </div>
 
                     </div>
-                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+
+                    <div class="tab-pane fade overflow-auto  "  style='width: 100%; height: 40rem; border-radius:1rem;' id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+
+
+
+                      <div class='d-flex flex-wrap  overflow-hidden'>
+                        
+                      {% for note in note %}
+                      <div class="card me-1 mb-2  border-0 overflow-scroll" style="width: 18rem;
+                       height: 20rem;
+                       background-color:{{note.color}};
+                        border-radius:1rem;">
+                        <div class="card-body  " style=''>
+                          <h5 class="card-title Audiowide ">{{note.title}}</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">...</h6>
+                          <p class="card-text">
+                            {{note.text}}
+                          </p>
+                    
+                        </div>
+
+                          <div class='position-sticky w-100 justify-content-center d-flex align-content-center flex-wrap bg-white bg-opacity-50 ps-2 pe-2   bottom-0' style='
+                          border-radius: 0 0 1rem 1rem;          
+                          -webkit-backdrop-filter: blur(60px);
+                          backdrop-filter: blur(60px);'>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-week-fill mt-1 me-2" viewBox="0 0 16 16">
+                                <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zM9.5 7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm3 0h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zM2 10.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+                              </svg>
+                            
+                            <strong>
+                              {{note.created}}
+                            </strong>
+                          </div>
+                      </div>
+                      {% endfor %}
+
+                      </div>
+
+                    </div>
                     <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
                   </div>
                 </div>
